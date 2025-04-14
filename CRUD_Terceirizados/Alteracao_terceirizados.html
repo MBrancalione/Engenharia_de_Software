@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Alterar Dados</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    #menu {
+      background-color: #823599; /* Azul escuro */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      height: 80px;
+    }
+    
+    #logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    #logo img {
+      height: 40px; /* Ajuste conforme o tamanho do logo */
+      margin-right: 10px;
+    }
+    
+    #logo span {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    
+    #menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    #menu ul li {
+      position: relative;
+    }
+    
+    #menu ul li a {
+      display: inline-block;
+      padding: 20px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+    
+    #menu ul li a:hover {
+      background-color: #4e1160;
+      color: #FFD700;
+    }
+    
+    #menu .reserve-button {
+      background-color: #eae7da;
+      color: #823599;
+      padding: 12px 20px;
+      margin-left: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    #menu .reserve-button:hover {
+      background-color: #dfdfdd;
+      color:#59126f;
+    }
+    
+    /* Submenu */
+    #menu ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #823599;
+      top: 60px;
+      min-width: 200px;
+      z-index: 1000;
+      border-radius: 0 0 5px 5px;
+    }
+    
+    #menu ul li:hover ul {
+      display: block;
+    }
+    
+    #menu ul li ul li a {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+    
+    #menu ul li ul li a:hover {
+      background-color:#823599;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 15px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-save {
+      background-color:#823599;
+      text-decoration: none;
+    }
+
+    .btn-delete {
+      background-color: #d9534f;
+    }
+  </style>
+</head>
+<body>
+
+   
+    <nav id="menu">
+        <div id="logo">
+          <span>Celebrart</span>
+        </div>
+        <ul>
+          <li>
+            <a href="/index.html">Home</a>
+          <li>
+            <a href="#">Clientes</a>
+            <ul>
+              <li><a href="#">Cadastrar Cliente</a></li>
+              <li><a href="#">Agendar Reserva</a></li>
+              <li><a href="#">Lista de Espera</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Funcionários</a>
+            <ul>
+              <li><a href="#">Cadastrar Funcionários</a></li>
+              <li><a href="#">Estoque</a></li>
+              <li><a href="#">Escala de Limpeza</a></li>
+              <li><a href="#">Folha de Pagamento</a></li>
+            </ul>
+          </li>
+          <li><a href="/CRUD_Terceirizados/Consulta_terceirizados.html">Terceirizados</a></li>
+          <li><a href="#" class="reserve-button">Agende seu horário!</a></li>
+        </ul>
+      </nav>
+
+
+<div class="container">
+  <h2>Alteração de Dados</h2>
+
+  <div class="form-group">
+    <label for="nome">Nome da Empresa</label>
+    <input type="text" id="nome" placeholder="Musical Eventos">
+  </div>
+
+  <div class="form-group">
+    <label for="email">CNPJ</label>
+    <input type="email" id="email" placeholder="00.623.904/0001-73">
+  </div>
+
+  <div class="form-group">
+    <label for="telefone">Telefone</label>
+    <input type="text" id="telefone" placeholder="49 98858-4449">
+  </div>
+
+  <div class="form-group">
+    <label for="telefone">Email</label>
+    <input type="text" id="telefone" placeholder="musicaleventos@gmail.com	">
+  </div>
+
+  <div class="form-group">
+    <label for="telefone">Descrição</label>
+    <input type="text" id="telefone" placeholder="Locação de equipamentos musicais para eventos.">
+  </div>
+    <button class="btn btn-save" onclick="alert('Alterações salvas com sucesso!'); window.location.href='/CRUD_Terceirizados/Consulta_terceirizados.html';">Salvar Alterações</button>
+    <button class="btn btn-delete" onclick="alert('Credencial apagada com sucesso!'); window.location.href='/CRUD_Terceirizados/Consulta_terceirizados.html';">Apagar Cadastro</button>
+</div>
+
+</body>
+</html>
