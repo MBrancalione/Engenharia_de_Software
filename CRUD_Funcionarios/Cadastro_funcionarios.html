@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados da Consulta</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* MENU */
+    #menu {
+      background-color: #823599;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      height: 80px;
+    }
+    
+    #logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    #logo span {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    
+    #menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    #menu ul li {
+      position: relative;
+    }
+    
+    #menu ul li a {
+      display: inline-block;
+      padding: 20px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+    
+    #menu ul li a:hover {
+      background-color: #4e1160;
+      color: #FFD700;
+    }
+    
+    #menu .reserve-button {
+      background-color: #eae7da;
+      color: #823599;
+      padding: 12px 20px;
+      margin-left: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    #menu .reserve-button:hover {
+      background-color: #dfdfdd;
+      color:#59126f;
+    }
+    
+    /* Submenu */
+    #menu ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #823599;
+      top: 60px;
+      min-width: 200px;
+      z-index: 1000;
+      border-radius: 0 0 5px 5px;
+    }
+    
+    #menu ul li:hover ul {
+      display: block;
+    }
+    
+    #menu ul li ul li a {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+    
+    #menu ul li ul li a:hover {
+      background-color: #823599;
+    }
+
+    /* Conteúdo principal */
+    .content {
+      padding: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    th {
+      background-color: #823599;
+      color: white;
+    }
+
+
+       /* Conteúdo principal */
+       .content {
+      padding: 30px;
+    }
+
+    .search-container input[type="text"], 
+    .search-container input[type="submit"] {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .search-container input[type="submit"] {
+      background-color: #823599;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-container input[type="submit"]:hover {
+      background-color: #4e1160;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="menu">
+    <div id="logo">
+      <span>Celebrart</span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#">Clientes</a>
+        <ul>
+          <li><a href="#">Cadastrar Cliente</a></li>
+          <li><a href="#">Agendar Reserva</a></li>
+          <li><a href="#">Lista de Espera</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Funcionários</a>
+        <ul>
+          <li><a href="#">Cadastrar Funcionários</a></li>
+          <li><a href="#">Estoque</a></li>
+          <li><a href="#">Escala de Limpeza</a></li>
+          <li><a href="#">Folha de Pagamento</a></li>
+        </ul>
+      </li>
+      <li><a href="/CRUD_Funcionarios/Consulta_funcionarios.html">Terceirizados</a></li>
+      <li><a href="#" class="reserve-button">Agende seu horário!</a></li>
+    </ul>
+  </nav>
+
+  <body>
+    
+    <div class="content">
+      <h1>Cadastro de Funcionários</h1>
+      <div class="search-container">
+        <form action="/CRUD_Funcionarios/Consulta_funcionarios_result.html" method="get">
+          <label for="cpf">CPF</label><br>
+          <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required><br>
+      
+          <label for="dataNascimento">Data de Nascimento</label><br>
+          <input type="date" id="dataNascimento" name="dataNascimento" required><br>
+      
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required><br>
+      
+          <label for="telefone">Telefone</label><br>
+          <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required><br>
+      
+          <label for="senha">Senha de Acesso</label><br>
+          <input type="password" id="senha" name="senha" required><br>
+        </form>
+        <form action="/CRUD_Funcionarios/Consulta_funcionarios.html" method="get">
+          <input type="submit" value="Salvar"><br>
+        </form>
+      </div>
+    </div>
+    
+    
+    </body>
+
+</body> 
+</html>
+
+
