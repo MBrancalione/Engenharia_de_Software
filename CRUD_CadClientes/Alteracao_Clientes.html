@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Cadastro de Cliente</title>
+  <script>
+    function limparCampos() {
+      document.getElementById("formCadastro").reset();
+      alert("Cadastro excluído com sucesso!");
+    }
+  </script>
 </head>
 <body>
+<h3>Alteração de dados cadastrais</h3>
 
-  <h3>Cadastro de Cliente</h3>
-
-  <div>
-    <form action=".......">
+<div>
+  <form id="formCadastro" action="../index.html">
     <label for="Nome">Nome</label>
     <input type="text" id="Nome" name="Nome" placeholder="João Da Silva"><br><br>
 
@@ -25,18 +28,22 @@
     <label for="nascimento">Data de nascimento:</label>
     <input type="date" id="nascimento" name="nascimento"placeholder="01/02/2000"><br><br>
 
+  
+    <input type="submit" value="Salvar Alterações" onClick="alert('Alterações salvas com sucesso!')"><br><br>
+      
+    <input type="button" value="Excluir cadastro" onClick="limparCampos()"><br><br>
+  
+    <a href="CadastroClientes.html">
+    <button type="button">Realizar novo cadastro</button>
+      </a><br><br> 
 
-      <button type="submit">Cadastrar</button>
-    </form>
-    <br>
-    
-    <a href="Alteracao_Clientes.html">
-      <button type="button">Alteração de Cadastro</button><br><br>
+    <a href="../index.html">
+          <button type="button">Voltar à página inicial</button>
+        </a>  
+  </form>
+</div>
 
-      <a href="../index.html">
-        <button type="button">Voltar à página inicial</button>><br><br>
-      </a>
-    </a>
-  </div>
 </body>
 </html>
+
+
