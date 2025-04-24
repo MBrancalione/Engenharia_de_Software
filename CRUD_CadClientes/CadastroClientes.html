@@ -3,6 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>Cadastro de Cliente</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    h3 {
+      text-align: center;
+      color: #823599;
+      margin-top: 40px;
+    }
+
+    form {
+      background-color: white;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button,
+    a button {
+      background-color: #823599;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover,
+    a button:hover {
+      background-color: #4e1160;
+    }
+
+    a.secondary-button button {
+      background-color: #eae7da;
+      color: #823599;
+    }
+
+    a.secondary-button button:hover {
+      background-color: #dfdfdd;
+      color: #59126f;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -10,33 +85,34 @@
 
   <div>
     <form action=".......">
-    <label for="Nome">Nome</label>
-    <input type="text" id="Nome" name="Nome" placeholder="João Da Silva"><br><br>
+      <label for="Nome">Nome</label>
+      <input type="text" id="Nome" name="Nome" placeholder="Ex: João Da Silva">
 
-    <label for="CPF">CPF:</label>
-    <input type="text" id="CPF" maxlength="9" name="CPF"placeholder="123.456.789"><br><br>
+      <label for="CPF">CPF:</label>
+      <input type="text" id="CPF" maxlength="9" name="CPF" placeholder="Ex: 123.456.789">
 
-    <label for="telefone">Telefone</label>
-    <input type="tel" id="telefone" maxlength="11" name="Telefone" placeholder="49 12345-6789"><br><br>
-    
-    <label for="Senha">Senha (máximo 8 caracteres)</label>
-    <input type="password" id="Senha" maxlength="8" name="Senha"placeholder="***********"><br><br>
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" maxlength="11" name="Telefone" placeholder="Ex: (49) 12345-6789">
 
-    <label for="nascimento">Data de nascimento:</label>
-    <input type="date" id="nascimento" name="nascimento"placeholder="01/02/2000"><br><br>
+      <label for="Senha">Senha (máximo 8 caracteres)</label>
+      <input type="password" id="Senha" maxlength="8" name="Senha" placeholder="***********">
 
+      <label for="nascimento">Data de nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento">
 
-      <button type="submit">Cadastrar</button>
+      <div class="button-group">
+        <button type="submit">Cadastrar</button>
+
+        <a href="Alteracao_Clientes.html" class="secondary-button">
+          <button type="button">Alteração de Cadastro</button>
+        </a>
+
+        <a href="../index.html" class="secondary-button">
+          <button type="button">Voltar à página inicial</button>
+        </a>
+      </div>
     </form>
-    <br>
-    
-    <a href="Alteracao_Clientes.html">
-      <button type="button">Alteração de Cadastro</button><br><br>
-
-      <a href="../index.html">
-        <button type="button">Voltar à página inicial</button>><br><br>
-      </a>
-    </a>
   </div>
+
 </body>
 </html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    #menu {
+      background-color: #823599;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      height: 80px;
+    }
+
+    #logo {
+      display: flex;
+      align-items: center;
+    }
+
+    #logo span {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    #menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    #menu ul li {
+      position: relative;
+    }
+
+    #menu ul li a {
+      display: inline-block;
+      padding: 20px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    #menu ul li a:hover {
+      background-color: #4e1160;
+      color: #FFD700;
+    }
+
+    #menu .reserve-button {
+      background-color: #eae7da;
+      color: #823599;
+      padding: 12px 20px;
+      margin-left: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    #menu .reserve-button:hover {
+      background-color: #dfdfdd;
+      color: #59126f;
+    }
+
+    #menu ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #823599;
+      top: 60px;
+      min-width: 200px;
+      z-index: 1000;
+      border-radius: 0 0 5px 5px;
+    }
+
+    #menu ul li:hover ul {
+      display: block;
+    }
+
+    #menu ul li ul li a {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+
+    #menu ul li ul li a:hover {
+      background-color: #823599;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type=text], input[type=number], input[type=submit] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      background-color: #823599;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  #btnAlteracao, #btnVoltar {
+  background-color: #eae7da;
+  color: #823599;
+  padding: 12px 20px;
+  margin: 10px 5px 0 0;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+  }
+
+  #btnAlteracao:hover, #btnVoltar:hover {
+  background-color: #dfdfdd;
+  color: #59126f;
+  }
+
+    input[type=submit]:hover {
+      background-color: #59126f;
+    }
+
+    .input-com-cifrao {
+      position: relative;
+    }
+
+    .input-com-cifrao span {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: gray;
+    }
+
+    .input-com-cifrao input {
+      padding-left: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="menu">
+  <div id="logo">
+    <span>Celebrart</span>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li>
+      <a href="#">Clientes</a>
+      <ul>
+        <li><a href="CRUD_CadClientes/CadastroClientes.html">Cadastrar Cliente</a></li>
+        <li><a href="#">Agendar Reserva</a></li>
+        <li><a href="#">Lista de Espera</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Funcionários</a>
+      <ul>
+        <li><a href="#">Cadastrar Funcionários</a></li>
+        <li><a href="#">Estoque</a></li>
+        <li><a href="#">Escala de Limpeza</a></li>
+        <li><a href="CRUD_FolhaPagamento/cadastroFP.html">Folha de Pagamento</a></li>
+      </ul>
+    </li>
+    <li><a href="/CRUD_Terceirizados/Consulta_terceirizados.html">Terceirizados</a></li>
+    <li><a href="#" class="reserve-button">Agende seu horário!</a></li>
+  </ul>
+</nav>
+
+<form action="../CRUD_Funcionarios/Consulta_funcionarios_result.html">
+  <label for="Nome">Nome do funcionário</label>
+  <input type="text" id="Nome" name="Nome" placeholder="Ex: João Da Silva">
+
+  <label for="SL">Salário liquído do funcionário:</label>
+  <div class="input-com-cifrao">
+    <span>R$</span>
+    <input type="text" id="SL" name="SL" placeholder="0,00">
+  </div>
+
+  <label for="SB">Salário bruto do funcionário:</label>
+  <div class="input-com-cifrao">
+    <span>R$</span>
+    <input type="text" id="SB" name="SB" placeholder="0,00">
+  </div>
+
+  <label for="CG">Carga horária (semanal)</label>
+  <input type="number" id="CG" name="CG" min="0" step="5" placeholder="Ex: 40h">
+
+  <label for="FGTS">Valor FGTS (R$):</label>
+  <div class="input-com-cifrao">
+    <span>R$</span>
+    <input type="text" id="FGTS" name="FGTS" placeholder="0,00">
+  </div>
+
+  <label for="INSS">Valor INSS (R$):</label>
+  <div class="input-com-cifrao">
+    <span>R$</span>
+    <input type="text" id="INSS" name="INSS" placeholder="0,00">
+  </div>
+
+  <input type="submit" value="Salvar">
+  <a href="AlteracaoFP.html"><button type="button">Alteração de Cadastro</button></a>
+  <a href="../index.html"><button type="button">Voltar à página inicial</button></a>
+</form>
+
+</body>
+</html>
