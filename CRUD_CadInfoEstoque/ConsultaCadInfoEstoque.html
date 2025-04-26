@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Consulta de Credenciais</h1>
+
+<div>
+  <form action="ConsultaCadInfoEstoque.html">
+    <label for="produtoestoque">Produto do Estoque</label>
+    <input type="text" id="produtoestoque" name="produtoestoque">
+    
+    <label for="qntproduto">Quantidade do Produto</label>
+    <input type="num" id="qntproduto" name="qntproduto">
+
+    <label for="tipos">Tipos</label>
+    <select id="tipos" name="tipos">
+      <option value="limpeza">Produto de Limpeza</option>
+      <option value="outros">Outros</option>
+  
+    <input type="submit" value="Consultar"> 
+	<a href="CadastroInfoEstoque.html"><input type= "button" value="Novo Cadastro de Informações de Estoque"></a>
+  </form>
+</div>
+<div class="content">
+    <h1>Informações de Estoque cadastradas:</h1>
+  
+    <table>
+      <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Tipo
+        </th>
+       
+      </tr>
+      <tr>
+        <td><a href="/CRUD_CadInfoEstoque/AlteraçãoCadInfoEstoque.html">Detergente</a> </td>
+        <td>10</td>
+        <td>Produto de Limpeza</td>
+      </tr>
+      
+      <tr>
+        <td>Cadeira</td>
+        <td>200</td>
+        <td>Outro</td>
+      </tr>
+
+      <tr>
+        <td>Panos de Prato</td>
+        <td>50</td>
+        <td>Outro</td>
+      </tr>
+    </table>
+  </div>
+  
+
+</body>
+</html>
+
+
