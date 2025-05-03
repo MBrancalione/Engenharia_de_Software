@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta de Empresas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+
+    /* MENU */
+    #menu {
+      background-color: #823599;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      height: 80px;
+    }
+   
+    #logo {
+      display: flex;
+      align-items: center;
+    }
+   
+    #logo span {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+   
+    #menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+   
+    #menu ul li {
+      position: relative;
+    }
+   
+    #menu ul li a {
+      display: inline-block;
+      padding: 20px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+   
+    #menu ul li a:hover {
+      background-color: #4e1160;
+      color: #FFD700;
+    }
+   
+    #menu .reserve-button {
+      background-color: #eae7da;
+      color: #823599;
+      padding: 12px 20px;
+      margin-left: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+   
+    #menu .reserve-button:hover {
+      background-color: #dfdfdd;
+      color:#59126f;
+    }
+   
+    /* Submenu */
+    #menu ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #823599;
+      top: 60px;
+      min-width: 200px;
+      z-index: 1000;
+      border-radius: 0 0 5px 5px;
+    }
+   
+    #menu ul li:hover ul {
+      display: block;
+    }
+   
+    #menu ul li ul li a {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+   
+    #menu ul li ul li a:hover {
+      background-color: #823599;
+    }
+
+
+    /* Conteúdo principal */
+    .content {
+      padding: 30px;
+    }
+
+
+    .search-container input[type="text"],
+    .search-container input[type="submit"] {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+
+    .search-container input[type="submit"] {
+      background-color: #823599;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+
+    .search-container input[type="submit"]:hover {
+      background-color: #4e1160;
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- MENU -->
+<nav id="menu">
+  <div id="logo">
+    <span>Celebrart</span>
+  </div>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li>
+      <a href="#">Clientes</a>
+      <ul>
+        <li><a href="#">Cadastrar Cliente</a></li>
+        <li><a href="#">Agendar Reserva</a></li>
+        <li><a href="#">Lista de Espera</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Funcionários</a>
+      <ul>
+        <li><a href="#">Cadastrar Funcionários</a></li>
+        <li><a href="#">Estoque</a></li>
+        <li><a href="#">Escala de Limpeza</a></li>
+        <li><a href="#">Folha de Pagamento</a></li>
+      </ul>
+    </li>
+    <li><a href="/CRUD_Terceirizados/Consulta_terceirizados.html">Terceirizados</a></li>
+    <li><a href="#" class="reserve-button">Agende seu horário!</a></li>
+  </ul>
+</nav>
+
+
+<!-- CONTEÚDO -->
+<div class="content">
+  <h1>Consulta de Clientes</h1>
+  <div class="search-container">
+    <form action="/Trabalho_ES/CRUD_CadClientes/Consulta_clientes.html" method="get">
+      <label for="Email">Email:</label><br>
+      <input type="text" id="Email" name="Email" placeholder="Digite o email do cliente"><br>
+
+
+      <label for="CPF">CPF:</label><br>
+      <input type="CPF" id="CPF" name="CPF" placeholder="Digite o CPF do cliente"><br>
+
+
+      <!-- Botão de consulta -->
+      <input type="submit" value="Consultar"><br>
+    </form>
+    <form action="/Trabalho_ES/CRUD_CadClientes/Consulta_clientes_result.html" method="get">
+      <input type="submit" value="Novo Cadastro"><br>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
