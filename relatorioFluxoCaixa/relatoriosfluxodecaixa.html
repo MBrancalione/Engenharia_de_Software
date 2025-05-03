@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatórios de Fluxo de Caixa</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            color: #8B0000;
+            margin-bottom: 15px;
+        }
+
+        .download-link {
+            display: block;
+            margin: 8px 0;
+            padding: 12px 20px;
+            background-color: #8B0000;
+            color: #fff8dc;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .download-link:hover {
+            background-color: #a30000;
+            transform: scale(1.02);
+        }
+
+        .download-link::before {
+            content: "⬇️ ";
+            margin-right: 4px;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #8B0000;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .botao:hover {
+            background-color: #a30000;
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .botao:active {
+            transform: scale(0.97);
+            background-color: #750000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>RELATÓRIOS DE FLUXO DE CAIXA</h2>
+        <h3>Ano: 2025</h3>
+
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 6meses.pdf" class="download-link" download>BAIXAR relatórios dos 6 meses</a>
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 3 meses 1.pdf" class="download-link" download>BAIXAR relatórios de janeiro, fevereiro e março</a>
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 3 meses 2.pdf" class="download-link" download>BAIXAR relatórios de abril, maio e junho</a>
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 1.pdf" class="download-link" download>BAIXAR relatório de janeiro</a>
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 2.pdf" class="download-link" download>BAIXAR relatório de fevereiro</a>
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 3.pdf" class="download-link" download>BAIXAR relatório de março</a>
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 4.pdf" class="download-link" download>BAIXAR relatório de abril</a>
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 5.pdf" class="download-link" download>BAIXAR relatório de maio</a>
+        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 6.pdf" class="download-link" download>BAIXAR relatório de junho</a>
+
+        <div class="section">
+            <h3>Enviar por e-mail</h3>
+            <label for="tipos">Selecione o relatório:</label>
+            <select id="tipos" name="tipos">
+                <option>Todos os 6 meses</option>
+                <option>Janeiro, fevereiro e março</option>
+                <option>Abril, maio e junho</option>
+                <option>Mês de janeiro</option>
+                <option>Mês de fevereiro</option>
+                <option>Mês de março</option>
+                <option>Mês de abril</option>
+                <option>Mês de maio</option>
+                <option>Mês de junho</option>
+            </select>
+
+            <a href="../relatorioFluxoCaixa/auxiliarbotaoemail.html" target="_blank" class="botao">ENVIAR POR E-MAIL</a>
+        </div>
+    </div>
+</body>
+</html>
