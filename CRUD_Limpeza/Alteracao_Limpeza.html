@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Alteração de Dados Cadastrais</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    h3 {
+      text-align: center;
+      color: #823599;
+      margin-top: 40px;
+    }
+
+    form {
+      background-color: white;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    input[type="submit"],
+    input[type="button"],
+    button {
+      background-color: #823599;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover,
+    input[type="button"]:hover,
+    button:hover {
+      background-color: #4e1160;
+    }
+
+    a button {
+      background-color: #eae7da;
+      color: #823599;
+    }
+
+    a button:hover {
+      background-color: #dfdfdd;
+      color: #59126f;
+    }
+  </style>
+
+  <script>
+    function limparCampos() {
+      document.getElementById("formCadastro").reset();
+      alert("Cadastro excluído com sucesso!");
+    }
+  </script>
+</head>
+<body>
+
+  <h3>Alteração de dados cadastrais</h3>
+
+  <div>
+    <form id="formCadastro" action="../index.html">
+      <label for="Nome">Nome</label>
+      <input type="text" id="Nome" name="Nome" placeholder="Ex: Jorge Da Silva">
+
+      <label for="CPF">CPF:</label>
+      <input type="text" id="CPF" maxlength="9" name="CPF" placeholder="Ex: 123.456.789">
+
+      <label for="data">Data desejada para a limpeza:</label>
+      <input type="date" id="data" name="data">
+
+      <input type="submit" value="Salvar Alterações" onClick="alert('Alterações salvas com sucesso!')">
+      <input type="button" value="Excluir cadastro" onClick="limparCampos()">
+
+      <a href="CadastroClientes.html">
+        <button type="button">Realizar novo cadastro</button>
+      </a>
+
+      <a href="../index.html">
+        <button type="button">Voltar à página inicial</button>
+      </a>
+    </form>
+  </div>
+
+</body>
+</html>
