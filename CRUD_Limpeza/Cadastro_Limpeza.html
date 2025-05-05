@@ -44,19 +44,20 @@
       font-size: 14px;
     }
 
-    button,
-    a button {
-      background-color: #823599;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 14px;
-      cursor: pointer;
-      margin-top: 10px;
-      margin-right: 10px;
-      transition: all 0.3s ease;
-    }
+    input[type="submit"],
+      input[type="button"],
+      button {
+        background-color: #823599;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
 
     button:hover,
     a button:hover {
@@ -95,7 +96,8 @@
       <input type="date" id="data" name="data">
 
       <div class="button-group">
-        <button type="submit">Cadastrar</button>
+
+        <a><input type="submit" value="Cadastrar" onClick="alert('Cadastro realizado com sucesso!')"></a>
 
         <a href="/CRUD_Limpeza/Alteracao_Limpeza.html" class="secondary-button">
           <button type="button">Alteração de Cadastro</button>
