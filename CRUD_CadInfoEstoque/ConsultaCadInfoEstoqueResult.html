@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Grupo VI Engenharia de Software">
     <meta name="description" content="Celebrart Eventos">
-    <title>Alteração de Clientes</title>
+    <title>Consulta de Clientes</title>
 
     <style>
         /*Formatação cabeçalho fixo (colocar em todas as páginas)*/
@@ -83,7 +83,6 @@
         background-color:#823599;
       }
     /*Fim formatação cabeçalho*/
-
     input[type=text], select {
       width: 100%;
       padding: 12px 20px;
@@ -93,7 +92,7 @@
       border-radius: 4px;
       box-sizing: border-box;
     }
-    
+
     input[type=submit] {
       width: 100%;
       background-color: #4CAF50;
@@ -104,7 +103,6 @@
       border-radius: 4px;
       cursor: pointer;
     }
-    
     input[type=button] {
       width: 100%;
       background-color: #4CAF50;
@@ -115,16 +113,85 @@
       border-radius: 4px;
       cursor: pointer;
     }
-    
+
     input[type=submit]:hover {
       background-color: #45a049;
     }
-    
+
     div {
       border-radius: 5px;
       background-color: #f2f2f2;
       padding: 20px;
     }
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+    
+    .content {
+        padding: 30px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      th {
+        background-color: #823599;
+        color: white;
+      }
+
+      .content {
+        padding: 30px;
+      }
+
+      .search-container input[type="text"],
+      .search-container input[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .search-container input[type="submit"] {
+        background-color: #823599;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .search-container input[type="submit"]:hover {
+        background-color: #4e1160;
+      }
     </style>
   </head>
   <body>
@@ -133,7 +200,7 @@
       <div id="logo">
         <span>Celebrart</span>
       </div>
-  
+
       <ul>
         <li>
           <a href="../index.html">Home</a><!--Em arquivos dentro de pastas, referenciar com os dois pontos antes da barra-->
@@ -157,40 +224,54 @@
       </ul>
     </nav>
     <!--Fim Cabeçalho Fixo-->
+  <h1>Consulta de Estoque</h1>
 
-    <h3>Alteração de Estoque</h3>
+  <div>
+    <form action="ConsultaCadInfoEstoque.html">
+      <label for="produtoestoque">ID Produto</label>
+      <input type="text" id="produtoestoque" name="1">
     
-    <div>
-      <form action="AlteraçãoCadInfoEstoque.html">
-        <label for="produtoestoque">Produto:</label>
-        <input type="text" id="produtoestoque" name="Detergente">
-
-        <label for="produtoestoque">Marca:</label>
-        <input type="text" id="produtoestoque" name="Ypê">
-
-        <label for="tipos">Tipos</label>
-        <select id="tipos" name="tipos">
-          <option value="limpeza">Produto de Limpeza</option>
-          <option value="outros">Outros</option>
-        </select>
-
-        <label for="produtoestoque">Valor:</label>
-        <input type="text" id="produtoestoque" name="R$50.00">
-
-        <label for="produtoestoque">Data de Validade:</label>
-        <input type="text" id="produtoestoque" name="22/10/2007"><!--Arruamr calendário-->
-        
-        <label for="qntproduto">Quantidade:</label>
-        <input type="num" id="qntproduto" name="50">
-
-        <label for="qntproduto">Limite:</label>
-        <input type="num" id="qntproduto" name="5">
-      
-        <button class="btn btn-save" type="button" onclick="alert('Produto cadastrado com sucesso!'); window.location.href='../index.html';">Salvar</button>
-        <button class="btn btn-save" type="button" onclick="alert('Produto excluído com sucesso!'); window.location.href='../index.html';">Excluir</button>
-
+      <a href="ConsultaCadInfoEstoqueResult.html"><input type= "button" value="Consultar"></a>
+      <a href="CadastroInfoEstoque.html"><input type= "button" value="Novo Cadastro"></a>
     </form>
-    </div>
+  </div>
+  <div class="content">
     
-    </body>
-</html> 
+      <table>
+        <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Marca</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Data de Validade</th>
+            <th>Quantidade</th>
+            <th>Limite</th>
+        </tr>
+        <tr>
+            <td><a href="AlteraçãoCadInfoEstoque.html">01</a></td>
+            <td>Detergente</a> </td>
+            <td>Ypê</td>
+            <td>Produto de Limpeza</td>
+            <td>R$1,50</td>
+            <td>22/10/2025</td><!--Fazer um minicalendário-->
+            <td>10</td>
+            <td>05</td>
+        </tr>
+        
+        <tr>
+            <td><a href="AlteraçãoCadInfoEstoque.html">02</a></td>
+            <td>Cadeira</td>
+            <td>Ypê</td>
+            <td>Outros</td>
+            <td>R$5,50</td>
+            <td>00/00/0000</td><!--Fazer um minicalendário-->
+            <td>300</td>
+            <td>100</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+
