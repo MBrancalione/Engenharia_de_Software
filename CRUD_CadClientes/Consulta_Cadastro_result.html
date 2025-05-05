@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Grupo VI Engenharia de Software">
     <meta name="description" content="Celebrart Eventos">
-    <title>Alteração de Clientes</title>
+    <title>Consulta de Clientes</title>
 
     <style>
         /*Formatação cabeçalho fixo (colocar em todas as páginas)*/
@@ -83,86 +83,56 @@
         background-color:#823599;
       }
     /*Fim formatação cabeçalho*/
-      body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #f9f9f9;
-      }
-
-      h3 {
-        text-align: center;
-        color: #823599;
-        margin-top: 40px;
-      }
-
-      form {
-        background-color: white;
-        max-width: 600px;
-        margin: 30px auto;
+    
+      .content {
         padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.1);
       }
-
-      label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-        color: #333;
-      }
-
-      input[type="text"],
-      input[type="password"],
-      input[type="tel"],
-      input[type="date"] {
+      table {
         width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 14px;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
       }
 
-      input[type="submit"],
-      input[type="button"],
-      button {
+      th {
         background-color: #823599;
         color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 14px;
-        cursor: pointer;
-        margin-top: 10px;
-        margin-right: 10px;
-        transition: all 0.3s ease;
       }
 
-      input[type="submit"]:hover,
-      input[type="button"]:hover,
-      button:hover {
+      .content {
+        padding: 30px;
+      }
+
+      .search-container input[type="text"],
+      .search-container input[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .search-container input[type="submit"] {
+        background-color: #823599;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .search-container input[type="submit"]:hover {
         background-color: #4e1160;
       }
-
-      a button {
-        background-color: #eae7da;
-        color: #823599;
-      }
-
-      a button:hover {
-        background-color: #dfdfdd;
-        color: #59126f;
-      }
     </style>
-
-    <script>
-      function limparCampos() {
-        document.getElementById("formCadastro").reset();
-        alert("Cadastro excluído com sucesso!");
-      }
-    </script>
-</head>
-<body>
+  </head>
+  <body>
   <!--Cabeçalho Fixo-->
   <nav id="menu">
     <div id="logo">
@@ -193,29 +163,50 @@
   </nav>
   <!--Fim Cabeçalho Fixo-->
 
-  <h3>Alteração de Dados Cadastrais</h3>
+  <div class="content">
+    <h1>Consulta de Clientes</h1>
+    <div class="search-container">
+      <form action="Consulta_Cadastro_result.html" method="get">
+        <label for="CPF">CPF:</label><br>
+        <input type="text" id="CPF" name="CPF" placeholder="Digite o CPF do cliente"><br>
 
-  <div>
-    <form id="formCadastro" action="../index.html">
-      <label for="Nome">Nome</label>
-      <input type="text" id="Nome" name="Nome" placeholder="João Da Silva">
-
-      <label for="CPF">CPF</label>
-      <input type="text" id="CPF" maxlength="11" name="CPF" placeholder="123.456.789-15">
-
-      <label for="Telefone">Telefone</label>
-      <input type="tel" id="telefone" maxlength="11" name="Telefone" placeholder="49 12345 6789">
-
-      <label for="Senha">Senha</label>
-      <input type="password" id="Senha" maxlength="8" name="Senha" placeholder="Máximo 8 caracteres">
-
-      <label for="nascimento">Data de Nascimento</label>
-      <input type="date" id="nascimento" name="22/12/2007">
-
-      <input type="submit" value="Salvar Alterações" onClick="alert('Alterações salvas com sucesso!')">
-      <input type="submit" value="Excluir cadastro" onClick="alert('Cliente excluído com sucesso!')">
-    </form>
+        <input type="submit" value="Consultar"><br>
+      </form>
+      <form action="CadastroClientes.html" method="get">
+        <input type="submit" value="Novo Cadastro"><br>
+      </form>
+    </div>
   </div>
 
-</body>
+  <!-- CONTEÚDO -->
+  <div class="content">
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Data de Nascimento</th>
+      </tr>
+      <tr>
+        <td><a href="Alteracao_Clientes.html">João Da Silva</a> </td>
+        <td>123.456.789-15</td>
+        <td>(49) 12345-6789</td>
+        <td>joãodasilva@gmail.com</td>
+        <td>01/01/1980</td>
+      </tr>
+    
+      <tr>
+        <td><a href="Alteracao_Clientes.html">Eduarda Souza</a> </td>
+        <td>987.654.321-47</td>
+        <td>(49) 98765-4321</td>
+        <td>eduardasouza@gmail.com</td>
+        <td>01/02/2002</td>
+      </tr>
+    </table>
+  </div> 
+  </body>
 </html>
+
+
+
