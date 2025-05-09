@@ -1,122 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Grupo VI Engenharia de Software">
-    <meta name="description" content="Celebrart Eventos">
-    <title>Página Inicial</title>
-  </head>
-
-  <!--Styles in Line-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Grupo VI Engenharia de Software">
+  <meta name="description" content="Celebrart Eventos - Página Inicial">
+  <title>Página Inicial | Celebrart</title>
+  <link rel="stylesheet" href="styles.css/styles.css">
   <style>
-    /*Formatação cabeçalho fixo (colocar em todas as páginas)*/
-      body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-      }
-      #menu {
-        background-color: #823599;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 30px;
-        height: 80px;
-      }
-      #logo span {
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        letter-spacing: 1px;
-      }
-      #menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-      }
-      #menu ul li {
-        position: relative;
-      }
-      #menu ul li a {
-        display: inline-block;
-        padding: 20px 15px;
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-      }
-      #menu ul li a:hover {
-        background-color: #4e1160;
-        color: #FFD700;
-      }
-      #menu .reserve-button {
-        background-color: #eae7da;
-        color: #823599;
-        padding: 12px 20px;
-        margin-left: 20px;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
-      #menu .reserve-button:hover {
-        background-color: #dfdfdd;
-        color:#59126f;
-      }
-      /* Submenus */
-      #menu ul li ul {
-        display: none;
-        position: absolute;
-        background-color: #823599;
-        top: 60px;
-        min-width: 200px;
-        z-index: 1000;
-        border-radius: 0 0 5px 5px;
-      }
-      #menu ul li:hover ul {
-        display: block;
-      }
-      #menu ul li ul li a {
-        padding: 12px 20px;
-        font-size: 14px;
-      }
-      #menu ul li ul li a:hover {
-        background-color:#823599;
-      }
-    /*Fim formatação cabeçalho*/
-      </style>
+    /* Estilos específicos para a página inicial */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .feature-card {
+      background-color: var(--surface);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .feature-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .quick-actions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho Padrão -->
+  <header class="navbar">
+    <div class="container navbar__content">
+      <a href="index.html" class="logo">Celebrart</a>
       
-      <body>
-        <!--Padronizar em todas as páginas, checar links de referências de cadastro-->
-        <!--Cabeçalho Fixo-->
-        <nav id="menu">
-          <div id="logo">
-            <span>Celebrart</span>
-          </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          
+          <li class="nav__item">
+            <a href="CRUD_CadClientes/Conculta_CadClientes.html" class="nav__link">Clientes</a>
+            <ul class="submenu">
+              <li><a href="CRUD_Reserva/CRUD_Reservas.html" class="submenu__link">Agendar Reserva</a></li>
+              <li><a href="CRUD_ListaEspera/CadastroListaEspera.html" class="submenu__link">Lista de Espera</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <a href="CRUD_Funcionarios/Consulta_funcionarios.html" class="nav__link">Funcionários</a>
+            <ul class="submenu">
+              <li><a href="CRUD_CadInfoEstoque/ConsultaCadInfoEstoque.html" class="submenu__link">Estoque</a></li>
+              <li><a href="CRUD_Limpeza/Conculta_Cadlimpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+              <li><a href="CRUD_FolhaPagamento/cadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <a href="CRUD_Terceirizados/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
+          </li>
+        </ul>
+        
+        <a href="CRUD_Reserva/CRUD_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+      </nav>
+    </div>
+  </header>
 
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            <li>
-              <a href="CRUD_CadClientes/Conculta_CadClientes.html">Clientes</a>
-              <ul>
-                <li><a href="CRUD_Reserva/CRUD_Reservas.html">Agendar Reserva</a></li>
-                <li><a href="CRUD_ListaEspera/CadastroListaEspera.html">Lista de Espera</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="CRUD_Funcionarios/Consulta_funcionarios.html">Funcionários</a>
-              <ul>
-                <li><a href="CRUD_CadInfoEstoque/ConsultaCadInfoEstoque.html">Estoque</a></li>
-                <li><a href="CRUD_Limpeza/Conculta_Cadlimpeza.html">Escala de Limpeza</a></li>
-                <li><a href="CRUD_FolhaPagamento/cadastroFP.html">Folha de Pagamento</a></li>
-              </ul>
-            </li>
-            <li><a href="CRUD_Terceirizados/Consulta_terceirizados.html">Terceirizados</a></li>
-            <li><a href="CRUD_Reserva/CRUD_Reservas.html" class="reserve-button">Agende seu horário!</a></li>
-          </ul>
-        </nav>
-        <!--Fim Cabeçalho Fixo-->
-      </body>
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title">Celebrart Eventos</h1>
+      <p class="hero-subtitle">Soluções completas para gestão de eventos, reservas e equipes</p>
+      <a href="CRUD_Reserva/CRUD_Reservas.html" class="btn btn--primary">Comece agora</a>
+    </section>
+    
+    <div class="card">
+      <h2 class="page-title">Nossos Serviços</h2>
+      <p class="page-subtitle">Tudo que você precisa para gerenciar seu negócio de eventos</p>
+      
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3 class="feature-title">Agendamento Inteligente</h3>
+          <p>Gerencie reservas, confirme eventos e visualize sua agenda em tempo real.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3 class="feature-title">Gestão de Clientes</h3>
+          <p>Cadastro completo com histórico de eventos, preferências e contatos.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🧹</div>
+          <h3 class="feature-title">Controle de Equipe</h3>
+          <p>Escalas de trabalho, folha de pagamento e gestão de terceirizados.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2 class="page-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Acesso Rápido</h2>
+      
+      <div class="quick-actions">
+        <a href="CRUD_Reserva/CRUD_Reservas.html" class="btn btn--primary">Nova Reserva</a>
+        <a href="CRUD_CadClientes/Conculta_CadClientes.html" class="btn btn--outline">Clientes</a>
+        <a href="CRUD_Funcionarios/Consulta_funcionarios.html" class="btn btn--outline">Funcionários</a>
+        <a href="CRUD_Terceirizados/Consulta_terceirizados.html" class="btn btn--outline">Terceirizados</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Adicione scripts específicos da página aqui, se necessário
+  </script>
+</body>
 </html>
