@@ -1,163 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Grupo VI Engenharia de Software">
-    <meta name="description" content="Celebrart Eventos">
-    <title>Cadastro de Clientes</title>
-
-    <style>
-        /*Formatação cabeçalho fixo (colocar em todas as páginas)*/
-      body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-      }
-      #menu {
-        background-color: #823599;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 30px;
-        height: 80px;
-      }
-      #logo span {
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        letter-spacing: 1px;
-      }
-      #menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-      }
-      #menu ul li {
-        position: relative;
-      }
-      #menu ul li a {
-        display: inline-block;
-        padding: 20px 15px;
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-      }
-      #menu ul li a:hover {
-        background-color: #4e1160;
-        color: #FFD700;
-      }
-      #menu .reserve-button {
-        background-color: #eae7da;
-        color: #823599;
-        padding: 12px 20px;
-        margin-left: 20px;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
-      #menu .reserve-button:hover {
-        background-color: #dfdfdd;
-        color:#59126f;
-      }
-      /* Submenus */
-      #menu ul li ul {
-        display: none;
-        position: absolute;
-        background-color: #823599;
-        top: 60px;
-        min-width: 200px;
-        z-index: 1000;
-        border-radius: 0 0 5px 5px;
-      }
-      #menu ul li:hover ul {
-        display: block;
-      }
-      #menu ul li ul li a {
-        padding: 12px 20px;
-        font-size: 14px;
-      }
-      #menu ul li ul li a:hover {
-        background-color:#823599;
-      }
-    /*Fim formatação cabeçalho*/
-      .content {
-        padding: 30px;
-      }
-
-
-      .search-container input[type="text"],
-      .search-container input[type="submit"] {
-        padding: 10px;
-        font-size: 16px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        width: 100%;
-        max-width: 400px;
-      }
-
-
-      .search-container input[type="submit"] {
-        background-color: #823599;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-
-
-      .search-container input[type="submit"]:hover {
-        background-color: #4e1160;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Grupo VI Engenharia de Software" />
+    <meta name="description" content="Consulta Escala de Limpeza | Celebrart" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta Escala de Limpeza | Celebrart</title>
+    <link rel="stylesheet" href="../styles.css/styles.css" />
   </head>
   <body>
-    <!--Cabeçalho Fixo-->
-    <nav id="menu">
-      <div id="logo">
-        <span>Celebrart</span>
+    <!-- Cabeçalho Fixo -->
+    <header class="navbar">
+      <div class="container navbar__content">
+        <a href="../index.html" class="logo">Celebrart</a>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Clientes</a>
+              <ul class="submenu">
+                <li><a href="../CRUD_CadClientes/Conculta_CadClientes.html" class="submenu__link">Consultar Clientes</a></li>
+                <li><a href="../CRUD_Reserva/CRUD_Reservas.html" class="submenu__link">Agendar Reserva</a></li>
+                <li><a href="../CRUD_ListaEspera/ConsultaListaEspera.html" class="submenu__link">Lista de Espera</a></li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Funcionários</a>
+              <ul class="submenu">
+                <li><a href="../CRUD_CadInfoEstoque/ConsultaCadInfoEstoque.html" class="submenu__link">Estoque</a></li>
+                <li><a href="../CRUD_Limpeza/Conculta_Cadlimpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+                <li><a href="../CRUD_FolhaPagamento/cadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a href="../CRUD_Terceirizados/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
+            </li>
+          </ul>
+          <a href="../CRUD_Reserva/CRUD_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Fim Cabeçalho -->
+
+    <main class="container">
+      <div class="page-header">
+        <h1 class="page-title">Consulta Escala de Limpeza</h1>
+        <p class="page-subtitle">Encontre o cadastro pela identificação do CPF</p>
       </div>
 
-      <ul>
-        <li>
-          <a href="../index.html">Home</a><!--Em arquivos dentro de pastas, referenciar com os dois pontos antes da barra-->
-        <li>
-          <a href="../CRUD_CadClientes/Conculta_CadClientes.html">Clientes</a>
-          <ul>
-            <li><a href="../CRUD_Reserva/CRUD_Reservas.html">Agendar Reserva</a></li>
-            <li><a href="../CRUD_ListaEspera/ConsultaListaEspera.html">Lista de Espera</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="../CRUD_Funcionarios/Consulta_funcionarios.html">Funcionários</a>
-          <ul>
-            <li><a href="../CRUD_CadInfoEstoque/ConsultaCadInfoEstoque.html">Estoque</a></li>
-            <li><a href="../CRUD_Limpeza/Conculta_Cadlimpeza.html">Escala de Limpeza</a></li>
-            <li><a href="../CRUD_FolhaPagamento/cadastroFP.html">Folha de Pagamento</a></li>
-          </ul>
-        </li>
-        <li><a href="../CRUD_Terceirizados/Consulta_terceirizados.html">Terceirizados</a></li>
-        <li><a href="../CRUD_Reserva/CRUD_Reservas.html" class="reserve-button">Agende seu horário!</a></li>
-      </ul>
-    </nav>
-    <!--Fim Cabeçalho Fixo-->
+      <div class="card">
+        <form action="Consulta_Limpeza_result.html" method="get" class="form">
+          <div class="form__group">
+            <label for="CPF" class="form__label">CPF</label>
+            <input type="text" id="CPF" name="CPF" class="form__control" placeholder="Digite o CPF" required />
+          </div>
 
-    <div class="content">
-      <h1>Consulta Escala de Limpeza</h1>
-      <div class="search-container">
-        <form action="Consulta_Limpeza_result.html" method="get">
-          <label for="cnpj">CPF:</label><br>
-          <input type="text" id="CPF" name="CPF" placeholder="Digite o CPF"><br>
-
-          <input type="submit" value="Consultar"><br>
+          <div class="form__actions">
+            <input type="submit" value="Consultar" class="btn btn--primary" />
+          </div>
         </form>
-        <form action="Cadastro_Limpeza.html" method="get">
-          <input type="submit" value="Novo Cadastro"><br>
+
+        <form action="Cadastro_Limpeza.html" method="get" class="form">
+          <div class="form__actions">
+            <input type="submit" value="Novo Cadastro" class="btn btn--outline" />
+          </div>
         </form>
       </div>
-    </div>
+    </main>
   </body>
 </html>
-
-
