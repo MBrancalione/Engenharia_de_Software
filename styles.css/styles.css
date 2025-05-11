@@ -767,3 +767,31 @@ input[type="button"]:hover {
   color: #59126f;
 }
 
+
+
+.btn-voltar-header {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 1rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.btn-voltar-header:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-voltar__icone {
+  font-size: 22px;
+  font-weight: 900; /* Aumenta o traçado */
+  color: var(--primary-light); /* Roxo claro */
+  line-height: 1;
+}
+

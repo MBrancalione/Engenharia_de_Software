@@ -11,6 +11,11 @@
     <!-- Cabeçalho Padrão -->
     <header class="navbar">
       <div class="container navbar__content">
+        <a href="javascript:history.back()" class="btn-voltar-header" aria-label="Voltar">
+          <svg class="btn-voltar__icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </a>
         <a href="/index.html" class="logo">Celebrart</a>
         
         <nav class="nav">
@@ -42,14 +47,14 @@
     </div>
     
     <div class="card">
-      <form class="form" action="Consulta_funcionarios_result_C.html" method="get">
+      <form class="form" action="ConsultaListaEspera_result_C.html" method="get">
         <div class="form__group">
           <label for="CPF" class="form__label">Data do Evento:</label>
           <input type="date" id="nascimento" name="nascimento" class="form__control" required>  
         </div>
         
         <div class="form__actions">
-          <button type="submit" onclick="window.location.href='ConsultaListaEspera_result_C.html';" class="btn btn--primary">Consultar</button>
+          <button type="submit" class="btn btn--primary">Consultar</button>
           <a href="CadastroListaEspera.html" class="btn btn--outline">Nova Reserva</a>
         </div>
       </form>
