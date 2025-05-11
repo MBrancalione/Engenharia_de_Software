@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Grupo VI Engenharia de Software">
+  <meta name="description" content="Celebrart Eventos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Estoque | Celebrart</title>
+  <link rel="stylesheet" href="../styles.css/styles.css">
+</head>
+<body>
+    <!-- Cabeçalho Padrão -->
+    <header class="navbar">
+      <div class="container navbar__content">
+        <a href="../index.html" class="logo">Celebrart</a>
+        
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link">Home</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/I_CRUD_CadClientesV/Consulta_Clientes.html" class="nav__link">Clientes</a>
+              <ul class="submenu">
+                <li><a href="/IV_CRUD_ReservaV/Consulta_Reservas.html" class="submenu__link">Consultar Reserva</a></li>
+                <li><a href="/V_CRUD_ListaEsperaV/ConsultaListaEspera_C.html" class="submenu__link">Lista de Espera</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/II_CRUD_FuncionariosV/Consulta_funcionarios.html" class="nav__link">Funcionários</a>
+              <ul class="submenu">
+                <li><a href="/VI_CRUD_CadInfoEstoqueV/Consulta_Estoque.html" class="submenu__link">Estoque</a></li>
+                <li><a href="/VII_CRUD_Limpeza/Consulta_Limpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+                <li><a href="/VIII_FolhaPagamento/CadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+                <li><a href="/V_CRUD_ListaEsperaV/ConsultaListaEspera_F.html" class="submenu__link">Lista de Espera</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/III_CRUD_TerceirizadosV/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
+            </li>
+          </ul>
+          
+          <a href="/IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Fim Cabeçalho Padrão -->
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <div class="page-header">
+      <h1 class="page-title">Consulta de Estoque</h1>
+      <p class="page-subtitle">Gerencie os produtos em estoque.</p>
+    </div>
+    
+    <div class="card">
+      <form class="form" action="Consulta_Estoque_result.html" method="get">
+        <div class="form__group">
+          <label for="produto" class="form__label">Pesquisar por ID ou Nome:</label>
+          <input type="text" id="produto" name="produto" class="form__control" placeholder="Digite o ID ou nome do produto">
+        </div>
+        
+        <div class="form__actions">
+          <button type="submit" class="btn btn--primary">Consultar</button>
+          <a href="Cadastro_Estoque.html" class="btn btn--outline">Novo Cadastro</a>
+        </div>
+      </form>
+    </div>
+    
+    <div class="card" style="margin-top: 2rem;">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Produto</th>
+              <th>Marca</th>
+              <th>Tipo</th>
+              <th>Valor</th>
+              <th>Validade</th>
+              <th>Quantidade</th>
+              <th>Limite</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Detergente</td>
+              <td>Ypê</td>
+              <td>Limpeza</td>
+              <td>R$ 1,50</td>
+              <td>22/10/2025</td>
+              <td>10</td>
+              <td>5</td>
+              <td class="table__actions">
+                <a href="Alteracao_Estoque.html" class="btn btn--outline btn--sm">Editar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

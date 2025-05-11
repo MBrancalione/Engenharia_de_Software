@@ -530,7 +530,7 @@ p {
 
 .download-button {
   padding: 12px 24px;
-  background-color: #007bff;
+  background-color: #6a1b9a;
   color: white;
   font-size: 16px;
   text-decoration: none;
@@ -541,7 +541,7 @@ p {
 }
 
 .download-button:hover {
-  background-color: #0056b3;
+  background-color: #6a1b9a;
   transform: translateY(-3px);
 }
 
@@ -573,7 +573,7 @@ p {
 .download-button {
   width: 350px; /* Largura aumentada para evitar quebra de texto */
   padding: 12px 20px;
-  background-color: #007bff;
+  background-color: #6a1b9a;
   color: white;
   font-size: 16px;
   text-decoration: none;
@@ -584,7 +584,7 @@ p {
 }
 
 .download-button:hover {
-  background-color: #0056b3;
+  background-color: #6a1b9a;
   transform: translateY(-3px);
 }
 

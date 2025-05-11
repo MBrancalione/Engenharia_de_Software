@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Funcionário</title>
+  <link rel="stylesheet" href="../styles.css/styles.css">
+  <link rel="stylesheet" href="../styles.css/cadastro-funcionario.css">
+</head>
+<body>
+    <!-- Cabeçalho Padrão -->
+    <header class="navbar">
+      <div class="container navbar__content">
+        <a href="../index.html" class="logo">Celebrart</a>
+        
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link">Home</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/I_CRUD_CadClientesV/Consulta_Clientes.html" class="nav__link">Clientes</a>
+              <ul class="submenu">
+                <li><a href="/IV_CRUD_ReservaV/Consulta_Reservas.html" class="submenu__link">Consultar Reserva</a></li>
+                <li><a href="/V_CRUD_ListaEsperaV/ConsultaListaEspera_C.html" class="submenu__link">Lista de Espera</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/II_CRUD_FuncionariosV/Consulta_funcionarios.html" class="nav__link">Funcionários</a>
+              <ul class="submenu">
+                <li><a href="/VI_CRUD_CadInfoEstoqueV/Consulta_Estoque.html" class="submenu__link">Estoque</a></li>
+                <li><a href="/VII_CRUD_Limpeza/Consulta_Limpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+                <li><a href="/VIII_FolhaPagamento/CadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+                <li><a href="/V_CRUD_ListaEsperaV/ConsultaListaEspera_F.html" class="submenu__link">Lista de Espera</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/III_CRUD_TerceirizadosV/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
+            </li>
+          </ul>
+          
+          <a href="/IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Fim Cabeçalho Padrão -->
+
+<main class="container">
+    <div class="page-header">
+      <h1 class="page-title">Cadastro de Terceirizados</h1>
+      <p class="page-subtitle">Preencha os dados do novo terceirizado.</p>
+    </div>
+
+    <div class="card">
+      <form class="form" action="#" method="post">
+        <label for="Nome">Nome:</label>
+        <input type="text" id="Nome" name="Nome" placeholder="João Da Silva">
+
+        <label for="SL">Salário Liquído:</label>
+        <div class="input-com-cifrao">
+          <input type="text" id="SL" name="SL" placeholder="R$0,00">
+        </div>
+
+        <label for="SB">Salário Bruto:</label>
+        <div class="input-com-cifrao">
+          <input type="text" id="SB" name="SB" placeholder="R$0,00">
+        </div>
+
+        <label for="CG">Carga Horária Semanal:</label>
+        <input type="number" id="CG" name="CG" min="0" step="5" placeholder="40h">
+
+        <label for="FGTS">Valor FGTS (R$):</label>
+        <div class="input-com-cifrao">
+          <input type="text" id="FGTS" name="FGTS" placeholder="R$0,00">
+        </div>
+
+        <label for="INSS">Valor INSS (R$):</label>
+        <div class="input-com-cifrao">
+          <input type="text" id="INSS" name="INSS" placeholder="R$0,00">
+        </div>
+
+        <div class="form__actions">
+          <a href="#" class="btn btn--primary" onclick="alert('Informações cadastradas com sucesso!'); var a = document.createElement('a');
+              a.href = 'folha_de_pagamento.pdf';
+              a.download = 'Folha de Pagamento.pdf';
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+              window.location.href = '../index.html';
+              return false;">
+              Cadastar
+          </a>
+      </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>
