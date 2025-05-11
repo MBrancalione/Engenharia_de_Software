@@ -74,7 +74,7 @@
     <!-- Cabeçalho Padrão -->
     <header class="navbar">
       <div class="container navbar__content">
-        <a href="Inicio_Clientes.html" class="logo">Celebrart</a>
+        <a href="index.html" class="logo">Celebrart</a>
         
         <nav class="nav">
           <ul class="nav__list">
@@ -83,27 +83,15 @@
             </li>
             
             <li class="nav__item">
-              <a href="I_CRUD_CadClientesV/Consulta_Clientes.html" class="nav__link">Clientes</a>
+              <a href="I_CRUD_CadClientesV/Cadastro_Clientes.html" class="nav__link">Clientes</a>
               <ul class="submenu">
-                <li><a href="IV_CRUD_ReservaV/Consulta_Reservas.html" class="submenu__link">Consultar Reserva</a></li>
+                <li><a href="IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="submenu__link">Consultar Reserva</a></li>
                 <li><a href="V_CRUD_ListaEsperaV/ConsultaListaEspera_C.html" class="submenu__link">Lista de Espera</a></li>
               </ul>
             </li>
-            
             <li class="nav__item">
-              <a href="II_CRUD_FuncionariosV/Consulta_funcionarios.html" class="nav__link">Funcionários</a>
-              <ul class="submenu">
-                <li><a href="VI_CRUD_CadInfoEstoqueV/Consulta_Estoque.html" class="submenu__link">Estoque</a></li>
-                <li><a href="VII_CRUD_Limpeza/Consulta_Limpeza.html" class="submenu__link">Escala de Limpeza</a></li>
-                <li><a href="VIII_FolhaPagamento/CadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
-                <li><a href="V_CRUD_ListaEsperaV/ConsultaListaEspera_F.html" class="submenu__link">Lista de Espera</a></li>
-              </ul>
+              <a href="III_CRUD_TerceirizadosV/Consulta_terceirizados_C.html" class="nav__link">Terceirizados</a>
             </li>
-            
-            <li class="nav__item">
-              <a href="III_CRUD_TerceirizadosV/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
-            </li>
-          </ul>
           
           <a href="IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
         </nav>
@@ -113,44 +101,45 @@
 
     <!-- Conteúdo Principal -->
     <main class="container">
-      <section class="hero">
-        <h1 class="hero-title">Celebrart Eventos</h1>
-        <p class="hero-subtitle">Soluções completas para gestão de eventos, reservas e equipes</p>
-        <a href="IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--primary">Agende agora!</a>
-      </section>
+  <section class="hero">
+    <h1 class="hero-title">Celebrart Eventos</h1>
+    <p class="hero-subtitle">Facilitamos a gestão de reservas para o seu evento com praticidade e eficiência</p>
+    <a href="IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--primary">Agende agora!</a>
+  </section>
+    
+    <div class="card">
+      <h2 class="page-title">Nossos Serviços</h2>
+      <p class="page-subtitle">Soluções práticas para agendamento e controle de reservas</p>
       
-      <div class="card">
-        <h2 class="page-title">Nossos Serviços</h2>
-        <p class="page-subtitle">Tudo que você precisa para gerenciar seu negócio de eventos</p>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3 class="feature-title">Agendamento Inteligente</h3>
+          <p>Gerencie reservas e visualize sua agenda de eventos em tempo real.</p>
+        </div>
         
-        <div class="features">
-          <div class="feature-card">
-            <div class="feature-icon">📅</div>
-            <h3 class="feature-title">Agendamento Inteligente</h3>
-            <p>Gerencie reservas, confirme eventos e visualize sua agenda em tempo real.</p>
-          </div>
-          
-          <div class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h3 class="feature-title">Gestão de Clientes</h3>
-            <p>Cadastro completo com histórico de eventos, preferências e contatos.</p>
-          </div>
-          
-          <div class="feature-card">
-            <div class="feature-icon">🧹</div>
-            <h3 class="feature-title">Controle de Equipe</h3>
-            <p>Escalas de trabalho, folha de pagamento e gestão de terceirizados.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3 class="feature-title">Histórico de Reservas</h3>
+          <p>Acompanhe reservas passadas, alterações e status atual de cada evento.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3 class="feature-title">Notificações e Lembretes</h3>
+          <p>Receba alertas automáticos sobre prazos, confirmações e atualizações de reservas.</p>
         </div>
       </div>
+    </div>
+  </main>
+
       
       <div class="card">
         <h2 class="page-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Acesso Rápido</h2>
         <div class="quick-actions">
           <a href="IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--outline">Nova Reserva</a>
-          <a href="I_CRUD_CadClientesV/Consulta_Clientes.html" class="btn btn--outline">Clientes</a>
-          <a href="II_CRUD_FuncionariosV/Consulta_funcionarios.html" class="btn btn--outline">Funcionários</a>
-          <a href="III_CRUD_TerceirizadosV/Consulta_terceirizados.html" class="btn btn--outline">Terceirizados</a>
+          <a href="I_CRUD_CadClientesV/Cadastro_Clientes.html" class="btn btn--outline">Clientes</a>
+          <a href="III_CRUD_TerceirizadosV/Consulta_terceirizados_C.html" class="btn btn--outline">Terceirizados</a>
         </div>
       </div>
     </main>

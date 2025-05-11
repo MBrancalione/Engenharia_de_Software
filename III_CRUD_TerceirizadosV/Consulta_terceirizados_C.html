@@ -2,9 +2,10 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="author" content="Grupo VI Engenharia de Software">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Consulta de Credenciais | Celebrart">
-  <title>Consulta de Credenciais | Celebrart</title>
+  <meta name="description" content="Consulta de Terceirizados - Celebrart">
+  <title>Consulta de Terceirizados | Celebrart</title>
   <link rel="stylesheet" href="../styles.css/styles.css">
 </head>
 <body>
@@ -35,22 +36,21 @@
       </div>
     </header>
     <!-- Fim Cabeçalho Padrão -->
-   <main class="container">
+  <main class="container">
     <div class="page-header">
-      <h1 class="page-title">Consulta Lista de Espera</h1>
-      <p class="page-subtitle">Consulte a lista de espera.</p>
+      <h1 class="page-title">Consulta de Terceirizados</h1>
+      <p class="page-subtitle">Preencha o CNPJ para consultar empresas terceirizadas cadastradas.</p>
     </div>
-    
+
     <div class="card">
-      <form class="form" action="Consulta_funcionarios_result_C.html" method="get">
+      <form action="Consulta_terceirizados_result_C.html" method="get" class="form">
         <div class="form__group">
-          <label for="CPF" class="form__label">Data do Evento:</label>
-          <input type="date" id="nascimento" name="nascimento" class="form__control" required>  
+          <label for="cpf" class="form__label">CNPJ:</label>
+          <input type="text" id="cpf" name="CPF" class="form__control" placeholder="Digite o CNPJ">
         </div>
-        
+
         <div class="form__actions">
-          <button type="submit" onclick="window.location.href='ConsultaListaEspera_result_C.html';" class="btn btn--primary">Consultar</button>
-          <a href="CadastroListaEspera.html" class="btn btn--outline">Nova Reserva</a>
+          <button type="submit" class="btn btn--primary">Consultar</button>
         </div>
       </form>
     </div>
