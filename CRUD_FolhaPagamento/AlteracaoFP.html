@@ -3,91 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Alteração de Dados Cadastrais</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    h3 {
-      text-align: center;
-      color: #823599;
-      margin-top: 40px;
-    }
-
-    form {
-      background-color: white;
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    input[type="text"],
-    input[type="number"] {
-      width: 100%;
-      padding: 10px 10px 10px 40px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-
-    .input-com-cifrao {
-      position: relative;
-    }
-
-    .input-com-cifrao span {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #823599;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    input[type="submit"],
-    input[type="button"],
-    button {
-      background-color: #823599;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 14px;
-      cursor: pointer;
-      margin-top: 10px;
-      margin-right: 10px;
-      transition: all 0.3s ease;
-    }
-
-    input[type="button"]:hover,
-    input[type="submit"]:hover,
-    button:hover {
-      background-color: #4e1160;
-    }
-
-    a button {
-      background-color: #eae7da;
-      color: #823599;
-    }
-
-    a button:hover {
-      background-color: #dfdfdd;
-      color: #59126f;
-    }
-  </style>
-
+  <link rel="stylesheet" href="../styles.css/styles.css">
+  <link rel="stylesheet" href="../styles.css/alterar-funcionario.css">
   <script>
     function limparCampos() {
       document.getElementById("formCadastro").reset();
@@ -130,12 +47,11 @@
       <input type="text" id="INSS" name="INSS" placeholder="0,00">
     </div>
 
-    <input type="submit" value="Salvar Alterações" onClick="alert('Alterações salvas com sucesso!')">
-    <input type="button" value="Excluir cadastro" onClick="limparCampos()">
-    
-    <a href="../index.html">
-      <button type="button">Voltar à página inicial</button>
-    </a>
+    <div class="button-group">
+      <input type="submit" value="Salvar Alterações" onClick="alert('Alterações salvas com sucesso!')">
+      <input type="button" value="Excluir cadastro" onClick="limparCampos()">
+      <a href="../index.html" class="btn-voltar">Voltar à página inicial</a>
+    </div>
   </form>
 
 </body>

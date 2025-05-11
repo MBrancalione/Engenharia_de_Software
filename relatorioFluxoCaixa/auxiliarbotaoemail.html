@@ -1,110 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Relatórios de Fluxo de Caixa</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f0f5;
-            color: #333;
-            padding: 40px;
-        }
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Grupo VI Engenharia de Software" />
+    <meta name="description" content="Relatórios de Fluxo de Caixa | Celebrart" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatórios de Fluxo de Caixa | Celebrart</title>
+    <link rel="stylesheet" href="../styles.css/styles.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho Fixo -->
+    <header class="navbar">
+      <div class="container navbar__content">
+        <a href="../index.html" class="logo">Celebrart</a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Clientes</a>
+              <ul class="submenu">
+                <li><a href="../CRUD_CadClientes/Conculta_CadClientes.html" class="submenu__link">Consultar Clientes</a></li>
+                <li><a href="../CRUD_Reserva/CRUD_Reservas.html" class="submenu__link">Agendar Reserva</a></li>
+                <li><a href="../CRUD_ListaEspera/ConsultaListaEspera.html" class="submenu__link">Lista de Espera</a></li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Funcionários</a>
+              <ul class="submenu">
+                <li><a href="../CRUD_CadInfoEstoque/ConsultaCadInfoEstoque.html" class="submenu__link">Estoque</a></li>
+                <li><a href="../CRUD_Limpeza/Conculta_Cadlimpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+                <li><a href="../CRUD_FolhaPagamento/cadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a href="../CRUD_Terceirizados/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
+            </li>
+          </ul>
+          <a href="../CRUD_Reserva/CRUD_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+        </nav>
+      </div>
+    </header>
 
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: #fff;
-            padding: 30px 40px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
+    <main class="container">
+      <div class="page-header">
+        <h2 class="page-title">Relatórios de Fluxo de Caixa</h2>
+        <h3 class="page-subtitle">Ano: 2025</h3>
+      </div>
 
-        h2, h3 {
-            color: #8B0000;
-            margin-bottom: 15px;
-        }
+      <div class="section">
+        <h3 class="section-title">Baixe os Relatórios Abaixo:</h3>
+        <div class="report-links">
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 6meses.pdf" class="btn btn--primary" download>Relatório de 6 Meses</a>
+          </div>
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 3 meses 1.pdf" class="btn btn--primary" download>Jan, Fev, Mar</a>
+          </div>
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 3 meses 2.pdf" class="btn btn--primary" download>Abr, Mai, Jun</a>
+          </div>
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 1.pdf" class="btn btn--primary" download>Janeiro</a>
+          </div>
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 2.pdf" class="btn btn--primary" download>Fevereiro</a>
+          </div>
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 3.pdf" class="btn btn--primary" download>Março</a>
+          </div>
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 4.pdf" class="btn btn--primary" download>Abril</a>
+          </div>
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 5.pdf" class="btn btn--primary" download>Maio</a>
+          </div>
+          <div class="report-item">
+            <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 6.pdf" class="btn btn--primary" download>Junho</a>
+          </div>
+        </div>
+      </div>
 
-        .download-link {
-            display: block;
-            margin: 8px 0;
-            padding: 12px 20px;
-            background-color: #8B0000;
-            color: #fff8dc;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .download-link:hover {
-            background-color: #a30000;
-            transform: scale(1.02);
-        }
-
-        .download-link::before {
-            content: "⬇️ ";
-            margin-right: 4px;
-        }
-
-        .section {
-            margin-top: 30px;
-        }
-
-        select {
-            width: 100%;
-            padding: 12px;
-            font-size: 15px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-        }
-
-        .botao {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #8B0000;
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .botao:hover {
-            background-color: #a30000;
-            transform: scale(1.05);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .botao:active {
-            transform: scale(0.97);
-            background-color: #750000;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>RELATÓRIOS DE FLUXO DE CAIXA</h2>
-        <h3>Ano: 2025</h3>
-
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 6meses.pdf" class="download-link" download>BAIXAR relatórios dos 6 meses</a>
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 3 meses 1.pdf" class="download-link" download>BAIXAR relatórios de janeiro, fevereiro e março</a>
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - 3 meses 2.pdf" class="download-link" download>BAIXAR relatórios de abril, maio e junho</a>
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 1.pdf" class="download-link" download>BAIXAR relatório de janeiro</a>
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 2.pdf" class="download-link" download>BAIXAR relatório de fevereiro</a>
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 3.pdf" class="download-link" download>BAIXAR relatório de março</a>
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 4.pdf" class="download-link" download>BAIXAR relatório de abril</a>
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 5.pdf" class="download-link" download>BAIXAR relatório de maio</a>
-        <a href="../relatorioFluxoCaixa/fluxos_de_caixa_pdf/Fluxo_Caixa_Completo_Jan_Jun.xlsx - mes 6.pdf" class="download-link" download>BAIXAR relatório de junho</a>
-    
-        <br>
-        <h3>Relatório enviado para o e-mail digitado</h3>
-    </div>
-</body>
+      <div class="section">
+        <h3 class="section-title">Relatório Enviado para o E-mail Digitado</h3>
+      </div>
+    </main>
+  </body>
 </html>

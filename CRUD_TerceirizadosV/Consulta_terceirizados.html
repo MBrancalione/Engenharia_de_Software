@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Grupo VI Engenharia de Software">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta de Terceirizados - Celebrart">
+  <title>Consulta de Terceirizados | Celebrart</title>
+  <link rel="stylesheet" href="../styles.css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar__content">
+      <a href="../index.html" class="logo">Celebrart</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Clientes</a>
+            <ul class="submenu">
+              <li><a href="../CRUD_CadClientes/CadastroClientes.html" class="submenu__link">Cadastrar Cliente</a></li>
+              <li><a href="../CRUD_Reserva/CRUD_Reservas.html" class="submenu__link">Agendar Reserva</a></li>
+              <li><a href="../CRUD_ListaEspera/ConsultaListaEspera.html" class="submenu__link">Lista de Espera</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Funcionários</a>
+            <ul class="submenu">
+              <li><a href="../CRUD_Funcionarios/Consulta_funcionarios.html" class="submenu__link">Cadastrar Funcionários</a></li>
+              <li><a href="../CRUD_CadInfoEstoque/ConsultaCadInfoEstoque.html" class="submenu__link">Estoque</a></li>
+              <li><a href="../CRUD_Limpeza/Conculta_Cadlimpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+              <li><a href="../CRUD_FolhaPagamento/cadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="../CRUD_Terceirizados/Consulta_terceirizados.html" class="nav__link">Terceirizados</a></li>
+        </ul>
+        <a href="../CRUD_Reserva/CRUD_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1 class="page-title">Consulta de Terceirizados</h1>
+      <p class="page-subtitle">Preencha o CNPJ para consultar empresas terceirizadas cadastradas</p>
+    </div>
+
+    <div class="card">
+      <form action="Consulta_terceirizados_result.html" method="get" class="form">
+        <div class="form__group">
+          <label for="cpf" class="form__label">CNPJ</label>
+          <input type="text" id="cpf" name="CPF" class="form__control" placeholder="Digite o CNPJ">
+        </div>
+
+        <div class="form__actions">
+          <button type="submit" class="btn btn--primary">Consultar</button>
+          <a href="Cadastro_terceirizados.html" class="btn btn--outline">Novo Cadastro</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Grupo VI Engenharia de Software">
+  <meta name="description" content="Celebrart Eventos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Clientes | Celebrart</title>
+  <link rel="stylesheet" href="../styles.css/styles.css">
+  
+  <script>
+    function cadastrarCliente() {
+      alert('Cliente cadastrado com sucesso!');
+      window.location.href='../index.html';
+    }
+  </script>
+</head>
+<body>
+  <!-- Cabeçalho Padrão -->
+  <header class="navbar">
+    <div class="container navbar__content">
+      <a href="../index.html" class="logo">Celebrart</a>
+      
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="../CRUD_CadClientes/Conculta_CadClientes.html" class="nav__link">Clientes</a>
+            <ul class="submenu">
+              <li><a href="../CRUD_Reserva/CRUD_Reservas.html" class="submenu__link">Agendar Reserva</a></li>
+              <li><a href="../CRUD_ListaEspera/ConsultaListaEspera.html" class="submenu__link">Lista de Espera</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="../CRUD_Funcionarios/Consulta_funcionarios.html" class="nav__link">Funcionários</a>
+            <ul class="submenu">
+              <li><a href="../CRUD_CadInfoEstoque/ConsultaCadInfoEstoque.html" class="submenu__link">Estoque</a></li>
+              <li><a href="../CRUD_Limpeza/Conculta_Cadlimpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+              <li><a href="../CRUD_FolhaPagamento/cadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="../CRUD_Terceirizados/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
+          </li>
+        </ul>
+        
+        <a href="../CRUD_Reserva/CRUD_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <div class="page-header">
+      <h1 class="page-title">Cadastro de Cliente</h1>
+      <p class="page-subtitle">Preencha os dados do novo cliente</p>
+    </div>
+    
+    <div class="card">
+      <form class="form">
+        <div class="form__group">
+          <label for="Nome" class="form__label">Nome completo</label>
+          <input type="text" id="Nome" name="Nome" class="form__control" placeholder="João Da Silva" required>
+        </div>
+        
+        <div class="form__group">
+          <label for="CPF" class="form__label">CPF</label>
+          <input type="text" id="CPF" maxlength="11" name="CPF" class="form__control" placeholder="123.456.789-15" required>
+        </div>
+        
+        <div class="form__group">
+          <label for="telefone" class="form__label">Telefone</label>
+          <input type="tel" id="telefone" maxlength="11" name="Telefone" class="form__control" placeholder="49 12345 6789" required>
+        </div>
+        
+        <div class="form__group">
+          <label for="Senha" class="form__label">Criar Senha</label>
+          <input type="password" id="Senha" maxlength="8" name="Senha" class="form__control" placeholder="Máximo 8 caracteres" required>
+        </div>
+        
+        <div class="form__group">
+          <label for="nascimento" class="form__label">Data de Nascimento</label>
+          <input type="date" id="nascimento" name="nascimento" class="form__control" required>
+        </div>
+        
+        <div class="form__actions">
+          <a href="Alteracao_Clientes.html" class="btn btn--outline">Alteração de Cadastro</a>
+          <button type="button" class="btn btn--primary" onclick="cadastrarCliente()">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
