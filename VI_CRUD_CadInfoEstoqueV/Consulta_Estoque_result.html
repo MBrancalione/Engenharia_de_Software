@@ -56,24 +56,6 @@
 
   <!-- Conteúdo Principal -->
   <main class="container">
-    <div class="page-header">
-      <h1 class="page-title">Consulta de Estoque</h1>
-      <p class="page-subtitle">Gerencie os produtos em estoque.</p>
-    </div>
-    
-    <div class="card">
-      <form class="form" action="Consulta_Estoque_result.html" method="get">
-        <div class="form__group">
-          <label for="produto" class="form__label">Pesquisar por ID ou Nome:</label>
-          <input type="text" id="produto" name="produto" class="form__control" placeholder="Digite o ID ou nome do produto">
-        </div>
-        
-        <div class="form__actions">
-          <button type="submit" class="btn btn--primary">Consultar</button>
-          <a href="Cadastro_Estoque.html" class="btn btn--outline">Novo Cadastro</a>
-        </div>
-      </form>
-    </div>
     
     <div class="card" style="margin-top: 2rem;">
       <div class="table-container">
@@ -101,6 +83,19 @@
               <td>22/10/2025</td>
               <td>10</td>
               <td>5</td>
+              <td class="table__actions">
+                <a href="Alteracao_Estoque.html" class="btn btn--outline btn--sm">Editar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Água Sanitária</td>
+              <td>Qboa</td>
+              <td>Limpeza</td>
+              <td>R$ 20,50</td>
+              <td>22/07/2025</td>
+              <td>5</td>
+              <td>3</td>
               <td class="table__actions">
                 <a href="Alteracao_Estoque.html" class="btn btn--outline btn--sm">Editar</a>
               </td>
